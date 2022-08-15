@@ -17,7 +17,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "sadey2k" {
   name     = "sadey2k"
-  location = westus
+  location = "westus"
 }
 
 resource "azurerm_kubernetes_cluster" "sadey2k" {
