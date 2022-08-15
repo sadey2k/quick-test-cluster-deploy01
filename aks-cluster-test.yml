@@ -4,6 +4,7 @@ trigger:
 pool: 'TestAgentPool'
 
 steps:
+- checkout: self
 - task: TerraformCLI@0
   inputs:
     command: 'init'
