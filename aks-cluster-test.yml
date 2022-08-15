@@ -4,7 +4,12 @@ trigger:
 pool: 'TestAgentPool'
 
 steps:
-- checkout: self
+#- checkout: self
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)'
+    artifact: 'artifacts-name'
+    publishLocation: 'pipeline'
 - task: TerraformCLI@0
   inputs:
     command: 'init'
